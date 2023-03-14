@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('stadium_id'); 
             $table->string('stadium_name'); 
-            $table->string('stadium_name'); 
             $table->string('stadium_location'); 
             $table->string('team_id'); 
             $table->timestamps();

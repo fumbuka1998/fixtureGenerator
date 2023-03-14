@@ -1,0 +1,84 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  /* .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+} */ 
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+.book {
+  --color:#fff;
+  --duration: 6.8s;
+  width: 32px;
+  height: 12px;
+  position: relative;
+  margin: 32px 0 0 0;
+
+  /* //demo */
+  zoom: 1.5;
+}
+
+.inner{
+  width: 32px;
+  height: 12px;
+  position: relative;
+  transform-origin: 2px 2px;
+  transform: rotateZ(-90deg);
+  animation: book var(--duration) ease infinite;
+}
+
+.left,
+.height{
+  width: 60px;
+  height: 4px;
+  top: 0;
+  border-radius: 2px;
+  background: var(--color);
+  position: absolute;
+  &:before{
+      content: '';
+      width: 48px;
+      height: 4px;
+      border-radius: 2px;
+      background: inherit;
+      position: absolute;
+      top: -10px;
+      left: 6px;
+  }
+}
