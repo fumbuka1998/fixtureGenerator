@@ -17,10 +17,16 @@ return new class extends Migration
             $table->bigIncrements('role_id');
             $table->string('referee_id');
             $table->timestamps();
+
+            $table->foreign('referee_id')
+                    ->references('referee_id')
+                    ->on('referees')
+                    ->onDelete('cascade');
         });
+
     }
 
-    /**
+    /**'refe
      * Reverse the migrations.
      *
      * @return void

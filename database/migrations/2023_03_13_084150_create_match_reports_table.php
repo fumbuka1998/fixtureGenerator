@@ -15,10 +15,20 @@ return new class extends Migration
     {
         Schema::create('match_reports', function (Blueprint $table) {
             $table->id();
-            $table->string('report_id');
-            $table->string('fixture_id');
-            $table->string('referee_id');
+            $table->string('report_id')->unique();
+            $table->string('fixture_id')->unique();
+            $table->string('referee_id')->unique();
             $table->timestamps();
+
+            $table->foreign('fixture_id')
+                  ->references('id')
+                  ->on('fixtures')
+                  ->onDelete('cascade');
+
+            $table->foreign('referee_id')
+                  ->references('referee_id')
+                  ->on('referees')
+                  ->onDelete('cascade');
         });
     }
 

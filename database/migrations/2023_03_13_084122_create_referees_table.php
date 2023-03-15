@@ -14,12 +14,18 @@ return new class extends Migration
     public function up()
     {
         Schema::create('referees', function (Blueprint $table) {
-            $table->string('referee_id'); 
+            
+            $table->string('referee_id')->unsigned(); 
             $table->string('referee_name');
             $table->string('referee_pic');
             $table->enum('levels', array('FIFA', 'CUF', 'TFF'));
             $table->bigIncrements('role_id');
             $table->timestamps();
+
+            $table->foreign('role_id')
+                  ->references('role_id')
+                  ->on('referee_roles')
+                  ->onDelete('cascade');
         });
     }
 

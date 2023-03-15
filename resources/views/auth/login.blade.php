@@ -23,7 +23,7 @@
                 <label class="form-check-label" for="check">Remember me</label>
             </div>
 
-            <input class="btn btn-success w-100" type="submit" value="Sign in">
+            <input class="btn btn-primary w-100" type="submit" value="Sign in">
         </form>
     </div>
 </div>
