@@ -22,3 +22,34 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//superadmin route
+
+Route::get('superadmin', function(){
+    return view('superadmin');
+})->name('superadmin')->middleware('superadmin');
+
+//admin route
+
+Route::get('admin', function(){
+    return view('admin');
+})->name('admin')->middleware('admin');
+
+//referee route
+
+Route::get('referee', function(){
+    return view('referee');
+})->name('referee')->middleware('referee');
+
+//teamadmin route
+
+Route::get('teamadmin', function(){
+    return view('teamadmin');
+})->name('teamadmin')->middleware('teamadmin');
+
+// normaluser route
+
+Route::get('normaluser', function(){
+    return view('normaluser');
+})->name('normaluser')->middleware('normaluser');
+
