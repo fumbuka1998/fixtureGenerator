@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('referee_id');
             $table->timestamps();
 
-            $table->foreign('referee_id')
-                    ->references('referee_id')
-                    ->on('referees')
-                    ->onDelete('cascade');
+            // $table->foreign('referee_id')
+            //         ->references('referee_id')
+            //         ->on('referees')
+            //         ->onDelete('cascade');
         });
 
     }

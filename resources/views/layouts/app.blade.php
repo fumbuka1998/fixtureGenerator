@@ -14,18 +14,19 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    {{-- <link rel="stylesheet" href="css/bootstrap.min.css" /> --}}
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../assets/css/dataTables.bootstrap5.min.css" />
-    <link rel="stylesheet" href="../../assets/css/mylogin.css" />
+    {{-- <link rel="stylesheet" href="../../assets/css/mylogin.css" /> --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
 
-    <div class="login">
+    {{-- <div class="login">
         <div class="form-header">
             <!-- <h2 class="text-center">welcome home!</h2> -->
             <img src="../../assets/images/11cc.png" style="width: 100px" alt="..." />
@@ -50,9 +51,11 @@
                 <input class="btn btn-secondary w-100" type="submit" value="Sign in">
             </form>
         </div>
-    </div>
+    </div> --}}
+
+
    
-    {{-- <div id="app">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -110,7 +113,7 @@
         <main class="py-4">
             @yield('content')
         </main>
-    </div> --}}
+    </div>
 
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/jquery-3.5.1.js"></script>

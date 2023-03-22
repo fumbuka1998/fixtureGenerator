@@ -20,15 +20,15 @@ return new class extends Migration
             $table->string('referee_id')->unique();
             $table->timestamps();
 
-            $table->foreign('fixture_id')
-                  ->references('id')
-                  ->on('fixtures')
-                  ->onDelete('cascade');
+            // $table->foreign('id')
+            //       ->references('id')
+            //       ->on('fixtures')
+            //       ->onDelete('cascade');
 
-            $table->foreign('referee_id')
-                  ->references('referee_id')
-                  ->on('referees')
-                  ->onDelete('cascade');
+            // $table->foreign('referee_id')
+            //       ->references('referee_id')
+            //       ->on('referees')
+            //       ->onDelete('cascade');
         });
     }
 

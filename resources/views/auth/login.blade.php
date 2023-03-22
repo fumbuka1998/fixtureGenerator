@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="login">
+{{-- <div class="login">
     <div class="form-header">
         <!-- <h2 class="text-center">welcome home!</h2> -->
         <img src="../../assets/images/11cc.png" style="width: 100px" alt="..." />
@@ -26,8 +26,13 @@
             <input class="btn btn-primary w-100" type="submit" value="Sign in">
         </form>
     </div>
-</div>
-{{-- <div class="container">
+</div> --}}
+
+
+
+
+
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -95,5 +100,5 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 @endsection
