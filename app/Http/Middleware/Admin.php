@@ -24,7 +24,7 @@ class Admin
         $user = Auth::user();
 
         if($user->role==1){
-            return redirect('/superAdmin');
+            return redirect('/superadmin');
             
         }
         if($user->role==2)

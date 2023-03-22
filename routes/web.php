@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,31 +26,33 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //superadmin route
 
-Route::get('superadmin', function(){
+Route::get('/superadmin', function(){
     return view('superadmin');
 })->name('superadmin')->middleware('superadmin');
 
 //admin route
 
-Route::get('admin', function(){
+Route::get('/admin', function(){
     return view('admin');
 })->name('admin')->middleware('admin');
 
 //referee route
 
-Route::get('referee', function(){
+Route::get('/referee', function(){
     return view('referee');
 })->name('referee')->middleware('referee');
 
 //teamadmin route
 
-Route::get('teamadmin', function(){
+Route::get('/teamadmin', function(){
     return view('teamadmin');
 })->name('teamadmin')->middleware('teamadmin');
 
 // normaluser route
 
-Route::get('normaluser', function(){
+Route::get('/normaluser', function(){
     return view('normaluser');
 })->name('normaluser')->middleware('normaluser');
+
+
 

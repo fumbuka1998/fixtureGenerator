@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -52,7 +52,7 @@ class LoginController extends Controller
 
             switch($user_role){
                 case 1:
-                    return redirect('/superAdmin');
+                    return redirect('/superadmin');
                     break;
                 case 2:
                     return redirect('/admin');
@@ -61,10 +61,10 @@ class LoginController extends Controller
                     return redirect('/referee');
                     break;
                 case 4:
-                    return redirect('/teamAdmin');
+                    return redirect('/teamadmin');
                     break;
                 case 5:
-                    return redirect('/normalUser');
+                    return redirect('/normaluser');
                     break;
                 default:
                     Auth::logout();
