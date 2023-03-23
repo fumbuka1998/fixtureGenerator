@@ -71,14 +71,15 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>  {{ Auth::user()->name }}</a></li>
-                <li></li>
+                
                 <li >
-                    <a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i>  logout</a>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    
+                    <div class="dropdown-item" >
+                        {{-- <a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i>  logout</a> --}}
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                                         document.getElementById('logout-form').submit();"><i class="bi bi-box-arrow-left"></i> {{ __('logout') }}
+                           
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

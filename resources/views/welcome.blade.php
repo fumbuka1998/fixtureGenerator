@@ -74,6 +74,9 @@
             #navbar ul #register{
                 right: 75px;
             }
+            #navbar ul #login,#register:hover{
+                background: rgb(54, 41, 41);
+            }
 
 
         </style>
@@ -106,6 +109,9 @@
                 <li><a href="{{ route('register') }}" id="register">Register</a></li>
                </ul>
             </div>
+        </div>
+        <div id="image">
+            <img src="" alt="" >
         </div>
 
 
