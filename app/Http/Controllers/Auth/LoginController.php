@@ -52,19 +52,19 @@ class LoginController extends Controller
 
             switch($user_role){
                 case 1:
-                    return redirect('/superadmin');
+                    return view('superadmin');
                     break;
                 case 2:
-                    return redirect('/admin');
+                    return view('admin');
                     break;
                 case 3:
-                    return redirect('/referee');
+                    return view('referee');
                     break;
                 case 4:
-                    return redirect('/teamadmin');
+                    return view('teamadmin');
                     break;
                 case 5:
-                    return redirect('/normaluser');
+                    return view('normaluser');
                     break;
                 default:
                     Auth::logout();
