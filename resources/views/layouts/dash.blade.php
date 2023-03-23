@@ -72,7 +72,7 @@
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>  {{ Auth::user()->name }}</a></li>
                 <li></li>
-                <li class="nav-item dropdown">
+                <li >
                     <a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i>  logout</a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
