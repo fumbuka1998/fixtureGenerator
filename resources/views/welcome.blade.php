@@ -102,7 +102,7 @@
             }
             #content h2{
                 font-size: 300px;
-                color: #0d6129;
+                color: #313286;
             }
             #content h2:hover{
                 color: #030211;
@@ -153,7 +153,8 @@
         {{-- image --}}
         <div id="image">
             {{-- <img src="../../assets/images/12.png" alt="" > --}}
-            <img src="../../assets/images/myplayer.png" alt="" >
+            {{-- <img src="../../assets/images/myplayer.png" alt="" > --}}
+            <img src="../../assets/images/15.png" alt="" >
         </div>
 
         {{-- details --}}

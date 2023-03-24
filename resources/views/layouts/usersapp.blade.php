@@ -121,55 +121,7 @@
                 Interface
               </div>
             </li>
-            <li>
-              <a
-                class="nav-link px-3 sidebar-link"
-                data-bs-toggle="collapse"
-                href="#layouts"
-              >
-                <span class="me-2"><i class="bi bi-person-plus-fill"></i></span>
-                <span>Add Infos</span>
-                <span class="ms-auto">
-                  <span class="right-icon">
-                    <i class="bi bi-chevron-down"></i>
-                  </span>
-                </span>
-              </a>
-              <div class="collapse" id="layouts">
-                <ul class="navbar-nav ps-3">
-                  <li>
-                    <a href="#" class="nav-link px-3">
-                      <span class="me-2"
-                        ><i class="bi bi-person-badge-fill"></i></span>
-                      <span>Board Members</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="#" class="nav-link px-3">
-                      <span class="me-2"
-                        ><i class="bi bi-award-fill"></i></span>
-                      <span>Sports Teams</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link px-3">
-                      <span class="me-2"
-                        ><i class="bi bi-diamond"></i></span>
-                      <span>Referees</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="#" class="nav-link px-3">
-                      <span class="me-2"
-                        ><i class="bi bi-bag-fill"></i></span>
-                      <span>Stadiums</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+            
             <li>
               <a href="#" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-view-list"></i></i></span>
