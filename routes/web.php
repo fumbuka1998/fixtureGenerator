@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
+use App\http\Controllers\BoardMemberController;
 
-/*
+/*BoardMemberController
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -30,11 +31,14 @@ Route::get('/superadmin',[LoginController::class])->name('superadmin')->middlewa
 //     return view('superadmin');
 // })->name('superadmin')->middleware('superadmin');
 
-//admin route
+//admin route && and the board members
 
-Route::get('/admin', function(){
-    return view('admin');
-})->name('admin')->middleware('admin');
+Route::get('/admin',[LoginController::class])->name('admin')->middleware('admin');
+Route::get('/addBoardMember', [BoardMemberController::class, 'index'])->name('addboardMember');
+
+// Route::get('/admin', function(){
+//     return view('admin');
+// })->name('admin')->middleware('admin');
 
 //referee route
 

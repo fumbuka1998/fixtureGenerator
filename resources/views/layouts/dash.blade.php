@@ -138,7 +138,7 @@
               <div class="collapse" id="layouts">
                 <ul class="navbar-nav ps-3">
                   <li>
-                    <a href="#" class="nav-link px-3">
+                    <a href="{{ route('addboardMember') }}" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-person-badge-fill"></i></span>
                       <span>Board Members</span>
