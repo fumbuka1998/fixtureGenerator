@@ -77,6 +77,45 @@
             #navbar ul #login,#register:hover{
                 background: rgb(54, 41, 41);
             }
+            #image{
+                position: absolute;
+                top: calc(50% - 300px);
+                right: 10%;
+                z-index: 999;
+
+            }
+
+            #image img{
+                height: 600px;
+                filter: drop-shadow(-140px -140px 5px rgba(0, 0, 0,0.5));
+                transition: 0.5s;
+            }
+            #image img:hover{
+                filter: drop-shadow(0px 0px 5px rgba(0, 0, 0,0.5));
+            }
+
+            #content{
+                position: absolute;
+                top:30%;
+                left: 10%;
+                z-index: 996;  
+            }
+            #content h2{
+                font-size: 300px;
+                color: #0d6129;
+            }
+            #content h2:hover{
+                color: #030211;
+                transition: 0.5s;
+            }
+
+            #content h4{
+                font-size: 70px;
+
+            }
+            #content h4:hover{
+                color: #1e1764;
+            }
 
 
         </style>
@@ -110,11 +149,18 @@
                </ul>
             </div>
         </div>
+
+        {{-- image --}}
         <div id="image">
-            <img src="" alt="" >
+            {{-- <img src="../../assets/images/12.png" alt="" > --}}
+            <img src="../../assets/images/myplayer.png" alt="" >
         </div>
 
-
+        {{-- details --}}
+        <div id="content">
+            <h2>FIXTURE</h2>
+            <h4>GENERATOR</h4>
+        </div>
 
 
     </body>

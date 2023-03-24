@@ -266,7 +266,7 @@
             <div class="card h-100">
               <div class="card-header fw-bold">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                Generated Matches
+                  Generated Matches
               </div>
               <div class="card-body">
                 
