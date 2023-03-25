@@ -26,15 +26,20 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //superadmin route
-Route::get('/superadmin',[LoginController::class])->name('superadmin')->middleware('superadmin');
+Route::get('/superadmin', [LoginController::class])->name('superadmin')->middleware('superadmin');
 // Route::get('/superadmin', function(){
 //     return view('superadmin');
 // })->name('superadmin')->middleware('superadmin');
 
 //admin route && and the board members
 
-Route::get('/admin',[LoginController::class])->name('admin')->middleware('admin');
+Route::get('/admin', [LoginController::class])->name('admin')->middleware('admin');
 Route::get('/addBoardMember', [BoardMemberController::class, 'index'])->name('addboardMember');
+Route::get('fetchmember', [BoardMemberController::class, 'fetchStudents']);
+Route::post('memberstore', [BoardMemberController::class, 'store']);
+Route::get('edit-member/{id}', [BoardMemberController::class, 'edit']);
+Route::put('update_member/{id}', [BoardMemberController::class, 'update']);
+Route::delete('delete-member/{id}', [BoardMemberController::class, 'deleteMember']);
 
 // Route::get('/admin', function(){
 //     return view('admin');
@@ -42,21 +47,18 @@ Route::get('/addBoardMember', [BoardMemberController::class, 'index'])->name('ad
 
 //referee route
 
-Route::get('/referee', function(){
+Route::get('/referee', function () {
     return view('referee');
 })->name('referee')->middleware('referee');
 
 //teamadmin route
 
-Route::get('/teamadmin', function(){
+Route::get('/teamadmin', function () {
     return view('teamadmin');
 })->name('teamadmin')->middleware('teamadmin');
 
 // normaluser route
 
-Route::get('/normaluser', function(){
+Route::get('/normaluser', function () {
     return view('normaluser');
 })->name('normaluser')->middleware('normaluser');
-
-
-
