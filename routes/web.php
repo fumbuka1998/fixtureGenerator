@@ -34,12 +34,19 @@ Route::get('/superadmin', [LoginController::class])->name('superadmin')->middlew
 //admin route && and the board members
 
 Route::get('/admin', [LoginController::class])->name('admin')->middleware('admin');
+// Route::get('/addBoardMember', [BoardMemberController::class, 'index'])->name('addboardMember');
+// Route::get('fetchmember', [BoardMemberController::class, 'fetchStudents']);
+// Route::post('memberstore', [BoardMemberController::class, 'store']);
+// Route::get('edit-member/{id}', [BoardMemberController::class, 'edit']);
+// Route::put('update_member/{id}', [BoardMemberController::class, 'update']);
+// Route::delete('delete-member/{id}', [BoardMemberController::class, 'deleteMember']);
+
 Route::get('/addBoardMember', [BoardMemberController::class, 'index'])->name('addboardMember');
-Route::get('fetchmember', [BoardMemberController::class, 'fetchStudents']);
-Route::post('memberstore', [BoardMemberController::class, 'store']);
-Route::get('edit-member/{id}', [BoardMemberController::class, 'edit']);
-Route::put('update_member/{id}', [BoardMemberController::class, 'update']);
-Route::delete('delete-member/{id}', [BoardMemberController::class, 'deleteMember']);
+Route::post('/store', [BoardMemberController::class, 'store'])->name('store');
+Route::get('/fetchall', [BoardMemberController::class, 'fetchAll'])->name('fetchAll');
+Route::delete('/delete/id', [BoardMemberController::class, 'delete'])->name('delete');
+Route::get('/edit', [BoardMemberController::class, 'edit'])->name('edit');
+Route::post('/update', [BoardMemberController::class, 'update'])->name('update');
 
 // Route::get('/admin', function(){
 //     return view('admin');

@@ -15,8 +15,26 @@
     <title>FixtureGen</title>
   </head>
   <body>
+
+    {{-- including the nav navbar from the admin folder --}}
+
+    {{-- @include('admin.navbar') --}}
+    {{-- @include('admin.navbar') --}}
+    {{-- including the sidebbar from the admin folder --}}
+
+    {{-- @include('admin.sidebar') --}}
+
+    {{-- including the main cards --}}
+
+    {{-- @include('admin.maincards') --}}
+
+
+     {{-- <main class="py-1">  --}}
+      @yield('content')
+   {{-- </main>  --}}
+
     <!-- <img src="images/11cc.png" style="width: 100px" alt="..." /> -->
-    <!-- top navigation bar Fixture<span class="text-primary">Generator</span>-->
+    {{-- <!-- top navigation bar Fixture<span class="text-primary">Generator</span>-->
     <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
       <div class="container-fluid">
         <button
@@ -76,7 +94,7 @@
                     
                     <div class="dropdown-item" >
                         {{-- <a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i>  logout</a> --}}
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        {{-- <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();"><i class="bi bi-box-arrow-left"></i> {{ __('logout') }}
                            
@@ -93,10 +111,10 @@
           </ul>
         </div>
       </div>
-    </nav>
-    <!-- top navigation bar -->
+    </nav> --}}
+    <!-- top navigation bar --> 
     <!-- offcanvas -->
-    <div
+    {{-- <div
       class="offcanvas offcanvas-start sidebar-nav bg-dark"
       tabindex="-1"
       id="sidebar"
@@ -207,8 +225,8 @@
         </nav>
       </div>
     </div>
-    <!-- offcanvas -->
-    <main class="mt-5 pt-3">
+    <!-- offcanvas --> --}}
+    {{-- <main class="mt-5 pt-3">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 fw-bold">
@@ -276,12 +294,13 @@
           
 
       </div>
-    </main>
-    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
-    <script src="../../assets/js/jquery-3.5.1.js"></script>
-    <script src="../../assets/js/jquery.dataTables.min.js"></script>
-    <script src="../../assets/js/dataTables.bootstrap5.min.js"></script>
-    <script src="../../assets/js/script2.js"></script>
+    </main> --}}
+
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    @yield('scripts') --}}
+
+    
+    
   </body>
 </html>

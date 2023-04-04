@@ -1,4 +1,9 @@
-@extends('layouts.dash')
+@extends('layouts.usersapp')
+
+{{-- @include('admin.navbar') --}}
+@include('admin.sidebar')
+@include('admin.maincards') 
+@include('admin.scripts')
 
 {{-- @section('content')
 <div class="container">
