@@ -386,6 +386,7 @@ data-bs-backdrop="static" aria-hidden="true">
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <form action="#" method="POST" id="add_member_form" enctype="multipart/form-data">
+      {{-- {{ csrf_field() }} --}}
       @csrf
       <div class="modal-body p-4 bg-light">
         <div class="row">
@@ -395,12 +396,12 @@ data-bs-backdrop="static" aria-hidden="true">
           </div>
           <div class="col-lg">
             <label for="member_id">Member ID</label>
-            <input type="text" name="memb_id" class="form-control" placeholder="Member ID" required>
+            <input type="text" name="member_id" class="form-control" placeholder="Member ID" required>
           </div>
         </div>
         <div class="my-2">
-          <label for="email">Member Email</label>
-          <input type="email" name="email" class="form-control" placeholder="Member Email" required>
+          <label for="member_email">Member Email</label>
+          <input type="member_email" name="member_email" class="form-control" placeholder="Member Email" required>
         </div>
         {{-- <div class="my-2">
           <label for="phone">Phone</label>
@@ -451,7 +452,7 @@ data-bs-backdrop="static" aria-hidden="true">
         </div>
         <div class="my-2">
           <label for="member_email">Member Email</label>
-          <input type="email" name="member_email" id="member_email" class="form-control" placeholder="Member Email" required>
+          <input type="member_email" name="member_email" id="member_email" class="form-control" placeholder="Member Email" required>
         </div>
         {{-- <div class="my-2">
           <label for="phone">Phone</label>
@@ -509,7 +510,7 @@ data-bs-backdrop="static" aria-hidden="true">
     $("#add_member_form").submit(function(e) {
       e.preventDefault();
       const fd = new FormData(this);
-      console.log(fd);
+      // console.log(fd);
       $("#add_member_btn").text('Adding...');
       $.ajax({
         url: '{{ route('store') }}',
@@ -549,10 +550,10 @@ data-bs-backdrop="static" aria-hidden="true">
         success: function(response) {
           $("#member_name").val(response.member_name);
           $("#member_id").val(response.member_id);
-          $("#email").val(response.member_email);
+          $("#member_email").val(response.member_email);
           $("#member_pic").html(
             `<img src="public/storage/images/${response.member_pic}" width="100" class="img-fluid img-thumbnail">`);
-          $("#memb_id").val(response.id);
+          $("#member_id").val(response.id);
           $("#memb_member_pic").val(response.member_pic);
         }
       });

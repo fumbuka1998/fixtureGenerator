@@ -49,14 +49,14 @@
                   </li>
                   
                   <li>
-                    <a href="#" class="nav-link px-3">
+                    <a href="{{ route('addSportTeams') }}" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-award-fill"></i></span>
                       <span>Sports Teams</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="nav-link px-3">
+                    <a href="{{ route('addReferees') }}" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-diamond"></i></span>
                       <span>Referees</span>
@@ -64,7 +64,7 @@
                   </li>
                   
                   <li>
-                    <a href="#" class="nav-link px-3">
+                    <a href="{{route('addStadiums')}}" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-bag-fill"></i></span>
                       <span>Stadiums</span>
@@ -74,7 +74,7 @@
               </div>
             </li>
             <li>
-              <a href="#" class="nav-link px-3">
+              <a href="{{ route('matchgenerator') }}" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-view-list"></i></i></span>
                 <span>View Matches</span>
               </a>
@@ -82,7 +82,7 @@
            
 
             <li>
-              <a href="#" class="nav-link px-3">
+              <a href="{{ route('matchReport') }}" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
                 <span>Match Reports</span>
               </a>

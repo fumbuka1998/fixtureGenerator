@@ -117,7 +117,9 @@ class BoardMemberController extends Controller
     //         ]);
     //     }
     // }
+    // 336a1411d485e6a9223e7d2923b0ff07420903c9
 
+    // 7e66e95c781be8ae5e8833e426a2e443b98f2b44
 
     // new with sweetalert
 
@@ -148,7 +150,7 @@ class BoardMemberController extends Controller
             foreach ($membr as $membs) {
                 $output .= '<tr>
             <td>' . $membs->member_id . '</td>
-            <td><img src="../../storage/images/' . $membs->member_pic . '" width="50" class="img-thumbnail rounded-circle"></td>
+            <td><img src="../../storage/images/'.$membs->member_pic . '" width="50" class="img-thumbnail rounded-circle"></td>
             <td>' . $membs->member_name . '</td>
             <td>' . $membs->member_email . '</td>
             
@@ -179,6 +181,7 @@ class BoardMemberController extends Controller
         $membData = ['member_name' => $request->member_name, 'member_id' => $request->member_id, 'member_email' => $request->member_email,  'member_pic' => $fileName];
         // var_dump($membData);
         // exit();
+        // $membData->save();
 
         BoardMember::create($membData);
         return response()->json([
@@ -223,8 +226,8 @@ class BoardMemberController extends Controller
     {
         $id = $request->member_id;
         $membs = BoardMember::find($id);
-        var_dump($membs);
-        exit();
+        // var_dump($membs);
+        // exit();
 
         if (Storage::delete('../../storage/images/' . $membs->member_pic)) {
             BoardMember::destroy($id);

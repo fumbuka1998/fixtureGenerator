@@ -8,6 +8,7 @@
       <div class="row">
         <div class="col-md-3 mb-3">
           <div class="card bg-primary text-white h-100" style="background-image: url(../../assets/dashboardimages/yang1.png);">
+           
             <div class="card-body py-5 fw-bold">Sports Teams</div>
             <div class="card-footer d-flex fw-bold">
               View Details
@@ -18,7 +19,7 @@
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <a href="{{ route('addboardMember') }}">
+          {{-- <a href="{{ route('addboardMember') }}"> --}}
             <div class="card bg-warning text-dark h-100 fw-bold" style="background-image: url(../../assets/dashboardimages/tff.png);">
               <div class="card-body py-5">Board Members</div>
               <div class="card-footer d-flex">
